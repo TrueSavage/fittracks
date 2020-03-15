@@ -7,6 +7,7 @@ const app = express();
 app.use(express.static(join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 app.get('/exercise', (req, res) => {
   res.sendFile(join(_dirname, 'public/exercise.html'));
 
